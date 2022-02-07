@@ -33,8 +33,7 @@ export default [
   {
     input: 'src/index.js',
     output: [
-      { file: pkg.module, format: 'es' },
-      { file: pkg.main, format: 'umd', name: 'TabTitle' },
+      { file: pkg.main, format: 'cjs' },
     ],
     plugins: [
       svelte({emitCss: false}),

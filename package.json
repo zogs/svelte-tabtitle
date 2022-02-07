@@ -1,9 +1,9 @@
 {
   "name": "svelte-tabtitle",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "src/index.js",
   "svelte": "src/index.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "keywords": [
     "svelte",
@@ -23,6 +23,10 @@
   "bugs": {
     "url": "https://github.com/zogs/svelte-tabtitle/issues"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
