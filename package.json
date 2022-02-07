@@ -2,9 +2,8 @@
   "name": "svelte-tabtitle",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "src/index.js",
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "keywords": [
     "svelte",
