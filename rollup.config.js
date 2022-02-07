@@ -34,14 +34,15 @@ export default [
   {
     input: 'src/index.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
+      { file: pkg.main, format: 'iife', name: 'TabTitle' },
     ],
     plugins: [
       cleaner({ targets: ['./dist/']}),
+      commonjs(),
       svelte({emitCss: false}),
       css(),
       terser(),
-      resolve(),
+      resolve({browser: true}),
     ],
   },
   /*{
