@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import cleaner from 'rollup-plugin-cleaner';
 
 const production = !process.env.ROLLUP_WATCH;
 const pkg = require('./package.json');
@@ -36,6 +37,7 @@ export default [
       { file: pkg.main, format: 'cjs' },
     ],
     plugins: [
+      cleaner({ targets: ['./dist/']}),
       svelte({emitCss: false}),
       css(),
       terser(),
