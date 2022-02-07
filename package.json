@@ -3,7 +3,8 @@
   "main": "dist/index.js",
   "module": "src/index.js",
   "svelte": "src/index.js",
-  "version": "0.0.8",
+  "type": "module",
+  "version": "0.0.9",
   "license": "MIT",
   "keywords": [
     "svelte",
