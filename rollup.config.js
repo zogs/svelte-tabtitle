@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 
 const production = !process.env.ROLLUP_WATCH;
+const pkg = require('./package.json');
 
 function serve() {
 	let server;
@@ -30,12 +31,11 @@ function serve() {
 
 export default {
 	input: 'src/main.js',
-	output: {
-		sourcemap: true,
-		format: 'iife',
-		name: 'app',
-		file: 'public/build/bundle.js'
-	},
+	output: [
+		{ file: pkg.module, format: 'iife' },
+		{ file: pkg.module, format: 'es' },
+    { file: pkg.main, format: 'umd', name: 'TabTitle' }
+  ],
 	plugins: [
 		svelte({
 			compilerOptions: {
