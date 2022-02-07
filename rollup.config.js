@@ -35,6 +35,7 @@ export default [
     input: 'src/index.js',
     output: [
       { file: pkg.main, format: 'iife', name: 'TabTitle' },
+      { file: pkg.module, format: 'es' },
     ],
     plugins: [
       cleaner({ targets: ['./dist/']}),
