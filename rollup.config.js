@@ -43,7 +43,7 @@ export default [
       resolve(),
     ],
   },
-  {
+  /*{
     input: 'src/main.js',
     output: [
       { file: pkg.main, format: 'umd', name: 'TabTitle' }
@@ -85,5 +85,5 @@ export default [
     watch: {
       clearScreen: false
     }
-  }
+  }*/
 ];
